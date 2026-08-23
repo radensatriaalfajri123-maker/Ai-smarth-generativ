@@ -1,0 +1,16 @@
+# Menyembunyikan kunci rahasia API Groq
+backend/.env
+
+# Menyembunyikan folder sampah cache Python
+__pycache__/
+*.pyc
+
+# Menyembunyikan folder virtual environment (jika ada)
+venv/
+.venv/
+env/
+
+# Menyembunyikan file konfigurasi sistem operasi
+.DS_Store
+Thumbs.db
+
