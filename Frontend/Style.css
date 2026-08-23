@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 85vh;
+    background: #1e293b;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Efek Pelangi Bergerak untuk Judul */
+.rainbow-text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+    margin: 0;
+    background: linear-gradient(to right, #ef4444, #f59e0b, #10b981, #3b82f6, #8b5cf6, #ef4444);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 12px 16px;
+    border-radius: 15px;
+    max-width: 80%;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.user-msg { background: #3b82f6; align-self: flex-end; margin-left: auto; }
+.ai-msg { background: #334155; align-self: flex-start; }
+.loading-msg { background: #475569; font-style: italic; opacity: 0.7; }
+
+.input-area {
+    display: flex;
+    padding: 15px;
+    background: #0f172a;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    background: #334155;
+    color: white;
+    outline: none;
+}
+
+.btn {
+    background: #475569;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover { background: #64748b; }
+.send-btn { background: #10b981; }
+.send-btn:hover { background: #059669; }
+
